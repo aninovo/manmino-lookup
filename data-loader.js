@@ -10,8 +10,11 @@ function loadDataRemote(filename = remoteDataFilename) {
             type: "GET",
             url: filename,
             dataType: 'text/csv',
+            done: function () {
+                console.log('done');
+            },
             success: function (data) {
-                return dictionaryData;
+                return data;
             },
         });
     }
