@@ -9,6 +9,8 @@ function loadDataRemote(filename = remoteDataFilename) {
         $.ajax({
             type: "GET",
             url: filename,
+            async: true,
+            timeout: 40000,
             dataType: 'text/csv',
             done: function () {
                 console.log('done');
@@ -20,12 +22,12 @@ function loadDataRemote(filename = remoteDataFilename) {
                 indexManmino = formIndex(dictionaryData);
             },
             error: function (e) {
-                console.log('error '+e);
+                console.log('error ' + e.message);
             },
         });
     }
     catch (e) {
-        console.log('failed');
+        console.log('failed ' + e.message);
     }
 }
 
