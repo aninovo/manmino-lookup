@@ -31,14 +31,18 @@ content {
 }
 
 .headword {
-    color: #FFD801;
+    color: #FF0000;
     font-size: 16px;
     font-weight: 700;
     line-height: 16px;
     /* layout */
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 0;
+}
+
+.hanji {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
 }
 
 .definition {

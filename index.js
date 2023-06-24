@@ -6,7 +6,7 @@ function formatEntry(headword, definition = "", hanji = "", tips = false) {
         return `
             <div class="entry">
                 <span class="entry-header">
-                    <span class="headword">${headword} (${hanji})</span>
+                    <span class="headword">${headword} <span class="hanji">${hanji}</span></span>
                 </span>
                 <div class="definition">${definition}</div>
             </div>
