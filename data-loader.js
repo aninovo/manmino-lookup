@@ -14,9 +14,13 @@ function loadDataRemote(filename = remoteDataFilename) {
                 console.log('done');
             },
             success: function (data) {
+                console.log('success');
                 var csv = data;
                 dictionaryData = $.csv.toObjects(csv);
                 indexManmino = formIndex(dictionaryData);
+            },
+            error: function (e) {
+                console.log('error '+e);
             },
         });
     }
