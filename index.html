@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manmino lookup</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="header.css" />
+    <link rel="stylesheet" type="text/css" href="searchbar.css" />
+    <link rel="stylesheet" type="text/css" href="contents.css" />
+    <link rel="stylesheet" type="text/css" href="footer.css" />
+    <!-- a font for google material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="jquery.js"></script>
+    <script src="jquery.csv.min.js"></script>
+    <script src="data-loader.js"></script>
+    <script src="lookup.js"></script>
+    <script src="index.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <header>
+        <a href="https://manmino.github.io/" class="logo" >
+            <img alt="Manmino logo" src="MMLogoTrans.png" class="logo" />
+        </a>
+        <div id="search-bar">
+            <input type="text"
+                   id="search-bar-input"
+                   placeholder="| translate Manmino..." />
+            <div id="search-bar-button">
+                <span class="material-symbols-outlined">search</span><!--it will look like google material icon "magnifier"-->
+            </div>
+        </div>
+    </header>
+    <content>
+        <!-- dictionary entries will be shown here -->
+        <!--
+        <div class="entry">
+            <span class="entry-header">
+                <span class="headword">Headword</span>
+                <a href="" class="tips">tips</a>
+            </span>
+            <div class="definition">(n.) Definition</div>
+        </div>
+        -->
+    </content>
+    <footer>
+        Github <a href="https://github.com/Manmino/manmino.github.io">Manmino</a> language dictionary <a href="">app</a>;
+    </footer>
+    <!-- javascript event handling binding -->
+    <script>
+        function handler(e) {
+            if (e.type == 'click')
+                search();
+            if (e.type == 'keypress')
+                if (e.key == 'Enter')
+                    search();
+        }
+
+        $('#search-bar-button').on('click', handler);
+        $('#search-bar-input').on('keypress', handler);
+
+    </script>
+</body>
+</html>

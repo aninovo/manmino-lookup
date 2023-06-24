@@ -1,0 +1,55 @@
+#search-bar {
+    border-radius: 100px;
+    background: #FFF;
+    /* layout */
+    display: flex;
+    width: 229px;
+    padding: 8px 16px;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+#search-bar-input {
+    background: transparent;
+    border: none;
+    outline: none;
+    /* | type a word here... */
+    width: auto;
+    height: 20px;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 16px;
+    color: #1D2D35;
+    /* layout */
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+}
+::placeholder {
+    color: #E2EBEC;
+    line-height: 16px;
+}
+
+.material-symbols-outlined {
+    /* the search button */
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+#search-bar-button {
+    background: transparent;
+    color: #E2EBEC;
+    /* size */
+    width: 16px;
+    height: 16px;
+    margin-top: 0px;
+    font-size: 16px;
+    line-height: 16px;
+    /* layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    /* hand pointer when the mouse if hovering over, it's a button after all */
+    cursor: pointer;
+}
