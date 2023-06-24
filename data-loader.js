@@ -10,8 +10,6 @@ function loadDataRemote(filename = remoteDataFilename) {
             type: "GET",
             url: filename,
             async: true,
-            timeout: 40000,
-            dataType: 'text/csv',
             done: function () {
                 console.log('done');
             },
