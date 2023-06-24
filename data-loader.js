@@ -20,7 +20,7 @@ function loadDataRemote(filename = remoteDataFilename) {
                 indexManmino = formIndex(dictionaryData);
             },
             error: function (e) {
-                alert('Request Status: ' + e.status + ' Status Text: ' + e.statusText + ' ' + e.responseText);
+                console.log('Request Status: ' + e.status + ' Status Text: ' + e.statusText + ' ' + e.responseText);
             },
         });
     }
