@@ -14,7 +14,9 @@ function loadDataRemote(filename = remoteDataFilename) {
                 console.log('done');
             },
             success: function (data) {
-                return data;
+                var csv = data;
+                dictionaryData = $.csv.toObjects(csv);
+                indexManmino = formIndex(dictionaryData);
             },
         });
     }
@@ -33,14 +35,13 @@ losia,,,,(n) russia
 agwi,akuy,,餓鬼,(n) demon (Buddhist)`;
 
 function loadData() {
-    var csv = loadDataRemote();
-    if (csv == null)
-        csv = dummyCSV;
-
+    var csv = dummyCSV; // for local testing
     dictionaryData = $.csv.toObjects(csv);
     indexManmino = formIndex(dictionaryData);
-    // alert(indexManmino['o'][0]['Definition']);
+
+    loadDataRemote();
     // TODO saving locally
+
 }
 
 // index is headword->[entry, entry, entry]
